@@ -1,5 +1,6 @@
 body {
   background-color: black;
+  color: white;
 }
 
 img {
@@ -13,13 +14,20 @@ img {
 .container {
   width: 60%;
   max-width: 1400px;
-  background-color: brown;
   margin: 20px auto;
   position: relative;
   border-radius: 30px;
   overflow: hidden;
   box-shadow: 1px 1px 20px rgba(0, 238, 255, 0.397);
   border: 2px solid white;
+}
+.container-small {
+  width: 60%;
+  max-width: 1400px;
+  height: 100px;
+  margin: 40px auto;
+  overflow: hidden;
+  border: 1px solid white;
 }
 
 .carousel-container {
@@ -29,9 +37,26 @@ img {
   background-color: bisque;
 }
 
+.carousel-container-small {
+  display: flex;
+}
+
 .carousel-container.img{
   object-fit: cover;
   object-position: bottom;
+}
+
+.image-box-small {
+  width: calc(100% / 5);
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 0;
 }
 
 /* bottoni */
