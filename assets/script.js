@@ -29,6 +29,9 @@ const tutteLeImmagini = document.querySelectorAll(".hide");
 let CounterImage = 0;
 tutteLeImmagini[CounterImage].classList.remove("hide");
 
+//Il BtnPrev di default è nascosto
+btnPrev.classList.add("hide")
+
 
 
 //Al click il counter si incrementa o decrementa e lavora sulla classe "hide"
@@ -37,12 +40,26 @@ btnNext.addEventListener('click', function(){
   tutteLeImmagini[CounterImage].classList.add('hide');
   CounterImage++
   tutteLeImmagini[CounterImage].classList.remove('hide');
+  
+  //al click mostro il btnPrev
+  btnPrev.classList.remove("hide");
+  if (CounterImage === imageList.length - 1){
+    btnNext.classList.add("hide")}
 })
+
 
 btnPrev.addEventListener('click', function(){
   tutteLeImmagini[CounterImage].classList.add('hide');
   CounterImage--
   tutteLeImmagini[CounterImage].classList.remove('hide');
+
+  //al click mostro di nuovo il btnNext
+  btnNext.classList.remove("hide");
+  //e se arrivo all'inizio dell'array decrementando il contatore, nascondo il btnPrev
+  if (CounterImage == 0){
+    btnPrev.classList.add("hide")
+  }
 })
+
 
 
