@@ -1,3 +1,7 @@
+// BOTTONI NEXT & PREV
+const btnNext = document.getElementById("next");
+const btnPrev = document.getElementById("prev");
+//Contenitore immagini
 const carouselContainer = document.querySelector(".carousel-container");
 
 const imageList = [
@@ -27,15 +31,18 @@ tutteLeImmagini[CounterImage].classList.remove("hide");
 
 
 
-// BOTTONI NEXT & PREV
-const btnNext = document.getElementById("next");
-const btnPrev = document.getElementById("prev");
-
+//Al click il counter si incrementa o decrementa e lavora sulla classe "hide"
 
 btnNext.addEventListener('click', function(){
-
+  tutteLeImmagini[CounterImage].classList.add('hide');
+  CounterImage++
+  tutteLeImmagini[CounterImage].classList.remove('hide');
 })
 
 btnPrev.addEventListener('click', function(){
+  tutteLeImmagini[CounterImage].classList.add('hide');
+  CounterImage--
+  tutteLeImmagini[CounterImage].classList.remove('hide');
 })
+
 
