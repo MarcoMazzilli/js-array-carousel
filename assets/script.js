@@ -59,12 +59,17 @@ btnPrev.classList.add("hide")
 btnNext.addEventListener('click', function(){
 
   tutteLeImmagini[CounterImage].classList.add('hide');
-  listaOverlay[CounterImage].classList.remove("overlay");
+
 
   CounterImage++
 
   tutteLeImmagini[CounterImage].classList.remove('hide');
-  listaOverlay[CounterImage].classList.add("overlay");
+
+  //rimuovo l'overlay all'immagine piccola che corrisponde all'indice
+  listaOverlay[CounterImage].classList.remove("overlay");
+
+  // listaOverlay[CounterImage - 1].classList.add("overlay"); 
+  // questo va in conflitto !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
   btnPrev.classList.remove("hide");
@@ -81,7 +86,9 @@ btnPrev.addEventListener('click', function(){
     CounterImage--
     
     tutteLeImmagini[CounterImage].classList.remove('hide');
-    listaOverlay[CounterImage].classList.add("overlay");
+
+    listaOverlay[CounterImage].classList.remove("overlay");
+    listaOverlay[CounterImage + 1].classList.add("overlay");
   
   
     //al click mostro di nuovo il btnNext
