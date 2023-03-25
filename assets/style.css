@@ -21,14 +21,6 @@ img {
   box-shadow: 1px 1px 20px rgba(0, 238, 255, 0.397);
   border: 2px solid white;
 }
-.container-small {
-  width: 60%;
-  max-width: 1400px;
-  height: 100px;
-  margin: 40px auto;
-  overflow: hidden;
-  border: 1px solid white;
-}
 
 .carousel-container {
   max-width: 100%;
@@ -37,24 +29,29 @@ img {
   background-color: bisque;
 }
 
+/* Style small image and container */
+.container-small {
+  width: 60%;
+  max-width: 1400px;
+  height: 100px;
+  margin: 40px auto;
+  overflow: hidden;
+  border: 1px solid white;
+  border-radius: 15px;
+  box-shadow: 1px 1px 20px rgba(0, 238, 255, 0.397);
+}
+
 .carousel-container-small {
   display: flex;
   position: relative;
 }
 
-.carousel-container.img{
-  object-fit: cover;
-  object-position: bottom;
-}
-
 .image-box-small {
   width: calc(100% / 5);
-  position: relative;
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.7);
-  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 1);
   width: 100%;
   height: 300px;
   position: absolute;
