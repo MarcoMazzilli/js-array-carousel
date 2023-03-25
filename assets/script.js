@@ -3,6 +3,7 @@ const btnNext = document.getElementById("next");
 const btnPrev = document.getElementById("prev");
 //Contenitore immagini
 const carouselContainer = document.querySelector(".carousel-container");
+const carouselContainerSmall = document.querySelector(".carousel-container-small");
 
 const imageList = [
   'assets/img/01.webp',
@@ -17,10 +18,23 @@ for (let i = 0; i < imageList.length; i++) {
 
   let image = imageList[i];
 
-  console.log(image)
-
   carouselContainer.innerHTML += `<img src="${image}" class="hide">`
+
+
+  //Per generare le immagini nel container piccolo
+  const imageBoxSmall = document.createElement("div");
+
+  carouselContainerSmall.append(imageBoxSmall);
+  imageBoxSmall.classList.add("imageBoxSmall")
+  
+  const divOverlay = document.createElement("div")
+  divOverlay.classList.add("overlay")
+
+  imageBoxSmall.innerHTML += `  <img src="${image}">`;
+  imageBoxSmall.append(divOverlay)
+
 }
+
 
 //Recupero tutta la lista delle immagini e tolgo la classe ".hide" alla prima
 

@@ -39,6 +39,7 @@ img {
 
 .carousel-container-small {
   display: flex;
+  position: relative;
 }
 
 .carousel-container.img{
@@ -52,7 +53,8 @@ img {
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid white;
   width: 100%;
   height: 300px;
   position: absolute;
