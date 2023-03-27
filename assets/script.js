@@ -68,10 +68,6 @@ btnNext.addEventListener('click', function(){
   //rimuovo l'overlay all'immagine piccola che corrisponde all'indice
   listaOverlay[CounterImage].classList.remove("overlay");
 
-  // listaOverlay[CounterImage - 1].classList.add("overlay"); 
-  // questo va in conflitto !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
   btnPrev.classList.remove("hide");
   if (CounterImage === imageList.length - 1){
     btnNext.classList.add("hide")}
